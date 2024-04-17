@@ -13,3 +13,8 @@ El programa pide al usuario el nombre del compuesto quimico y si adivina termina
 
 ### Cosas a mejorar
 
+### Interfaz grafica
+
+- Agregar Input para el que el usuario ingrese el compuesto
+- Tener un Label del resultado
+- - Si se puede usar imagenes para mostrar Graficamente que compuesto es, si no solo el nombre del mismo.
