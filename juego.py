@@ -22,7 +22,7 @@ def escojerElemento ():
             elementos.append(elemento)
             
 infElemento=escojerElemento()
-print(infElemento [0])
+""" print(infElemento [0])
 respuesta =input("cual es el nombre del elemento:")
 probalElemento=int(infElemento.pop())
 if infElemento[1] == respuesta:
@@ -38,4 +38,4 @@ else:
     else:
         infElemento.append(probalElemento)
 elemento= infElemento[0]+"-"+infElemento[1]+"-"+infElemento[2]+"-"+infElemento[3]+"-"+infElemento[4]+"-"+str(infElemento[5])
-elementos.append(elemento)
+elementos.append(elemento) """
