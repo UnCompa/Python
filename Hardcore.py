@@ -1,6 +1,6 @@
 from tkinter import messagebox
 from tkinter import *
-from juegoDificil import *
+from juegoHardcore import *
 import os
 elementoObtenido = []
 estadoBoton = "Comprobar"
@@ -57,16 +57,16 @@ def compararElemento():
     estadoBoton = "Pasa"
     btnConfirmar.config(text="Siguiente",command=mostrarCompuesto)
 # FRAMES
-lbltitulo = Label(text="Memoria Atómica",bg="#222",fg="#ef4444",foreground="#ef4444",font=("Helvetica",24),pady=16).pack()
-lblElemento = Label(text="",bg="#222",fg="#fff",font=("Helvetica",24),pady=24,padx=24,borderwidth=(4),relief="flat",highlightthickness=3,highlightcolor="#0af",highlightbackground="#0af")
+lbltitulo = Label(text="Memoria Atómica",bg="#222",fg="#7f1d1d",foreground="#7f1d1d",font=("Helvetica",24),pady=16).pack()
+lblElemento = Label(text="",bg="#222",fg="#fff",font=("Helvetica",24),pady=24,padx=24,borderwidth=(4),relief="flat",highlightthickness=3,highlightcolor="#7f1d1d",highlightbackground="#7f1d1d")
 lblElemento.pack()
 lblCompuesto = Label(text="?",bg="#222",fg="#fff",font=("Helvetica",24),pady=32,)
 lblCompuesto.pack()
-txtCompuesto = Entry(bg="#333",fg="White",font="Helvetica",highlightthickness=1,highlightcolor="#0af",insertbackground="white",highlightbackground="blue",relief="flat",disabledbackground="#121212")
+txtCompuesto = Entry(bg="#333",fg="White",font="Helvetica",highlightthickness=1,highlightcolor="#7f1d1d",insertbackground="white",highlightbackground="#7f1d1d",relief="flat",disabledbackground="#121212")
 txtCompuesto.pack()
 lblMensaje = Label(text="",pady=24,bg="#222",font=("Helvetica",12))
 lblMensaje.pack()
-btnConfirmar = Button(text="Comprobar",command=compararElemento,pady=4,bg="#0af",fg="black",font=16)
+btnConfirmar = Button(text="Comprobar",command=compararElemento,pady=4,bg="#7f1d1d",fg="white",font=16)
 btnConfirmar.pack()
 lblPorcentaje = Label(text="",pady=12,bg="#222",fg="#aaa",font=("Helvetica", 16))
 lblPorcentaje.pack()

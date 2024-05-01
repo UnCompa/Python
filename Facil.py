@@ -3,9 +3,9 @@ from tkinter import *
 from juegoFacil import *
 import os
 elementoObtenido = []
-
+estadoBoton = "Comprobar"
 ventana = Tk()
-ventana.title("Juego")
+ventana.title("Memoria Atómica")
 directory = os.path.dirname(__file__)
 ventana.iconbitmap(f"{directory}/img/atomo.ico")
 ventana.geometry("500x500")
@@ -25,8 +25,11 @@ def mostrarCompuesto():
   lblElemento.config(text=elemento)
   txtCompuesto.config(state="normal")
   txtCompuesto.delete(0,END)
+  global estadoBoton
+  estadoBoton = "Comprobar"
   btnConfirmar.config(text="Comprobar",command=compararElemento)
 def compararElemento():
+  global estadoBoton
   elementoUsuario = txtCompuesto.get()
   txtCompuesto.config(state="disabled")
   global elementoObtenido
@@ -42,6 +45,7 @@ def compararElemento():
     porcentaje = calcularPosibilidad(probabilidad)
     lblPorcentaje.config(text=porcentaje)
     lblMensaje.config(text="Correcto",fg="green")
+    estadoBoton = "Pasa"
     btnConfirmar.config(text="Siguiente",command=mostrarCompuesto)
   else:
     if probabilidad == "100":
@@ -50,20 +54,28 @@ def compararElemento():
     porcentaje = calcularPosibilidad(probabilidad)
     lblPorcentaje.config(text=porcentaje)
     lblMensaje.config(text="Incorrecto",fg="red")
+    estadoBoton = "Pasa"
     btnConfirmar.config(text="Siguiente",command=mostrarCompuesto)
 # FRAMES
-lbltitulo = Label(text="Memorize",bg="#222",fg="#fff",foreground="white",font=("Arial",32,),pady=10,).pack()
-lblElemento = Label(text="",bg="#222",fg="#fff",font=("Arial",24),pady=24,padx=24,borderwidth=(4),relief="solid",highlightcolor="white",highlightthickness=1)
+lbltitulo = Label(text="Memoria Atómica",bg="#222",fg="#10b981",foreground="#10b981",font=("Helvetica",24),pady=16).pack()
+lblElemento = Label(text="",bg="#222",fg="#fff",font=("Helvetica",24),pady=24,padx=24,borderwidth=(4),relief="flat",highlightthickness=3,highlightcolor="#0af",highlightbackground="#0af")
 lblElemento.pack()
-lblCompuesto = Label(text="?",bg="#222",fg="#fff",font=("Arial",24),pady=32,)
+lblCompuesto = Label(text="?",bg="#222",fg="#fff",font=("Helvetica",24),pady=32,)
 lblCompuesto.pack()
-txtCompuesto = Entry(bg="#333",fg="White",font="Arial",highlightthickness=1,highlightcolor="White")
+txtCompuesto = Entry(bg="#333",fg="White",font="Helvetica",highlightthickness=1,highlightcolor="#0af",insertbackground="white",highlightbackground="blue",relief="flat",disabledbackground="#121212")
 txtCompuesto.pack()
-lblMensaje = Label(text="",pady=24,bg="#222")
+lblMensaje = Label(text="",pady=24,bg="#222",font=("Helvetica",12))
 lblMensaje.pack()
-btnConfirmar = Button(text="Comprobar",command=compararElemento,pady=4,bg="#0af",fg="white",font=16)
+btnConfirmar = Button(text="Comprobar",command=compararElemento,pady=4,bg="#0af",fg="black",font=16)
 btnConfirmar.pack()
-lblPorcentaje = Label(text="",pady=12,bg="#222",fg="#0f0",font=("Arial", 24))
+lblPorcentaje = Label(text="",pady=12,bg="#222",fg="#aaa",font=("Helvetica", 16))
 lblPorcentaje.pack()
+def comprobar_enter(eent):
+    global estadoBoton
+    if estadoBoton == "Comprobar":
+      compararElemento()
+    elif estadoBoton == "Pasa": 
+      mostrarCompuesto()
+ventana.bind("<Return>", comprobar_enter)
 mostrarCompuesto()
 ventana.mainloop()

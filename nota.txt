@@ -1,0 +1,2 @@
+Para crear el exe
+pyinstaller --add-data "img;img" --noconsole Dificil.py

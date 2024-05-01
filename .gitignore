@@ -1,0 +1,6 @@
+#pycache
+__pycache__/*
+#dist
+dist/
+#Build
+build/

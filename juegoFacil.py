@@ -62,30 +62,29 @@ def validarElementos(infElemento,respuesta):
     elementos.append(elemento)
     return elemento
 
-""" validarElementos("H-Hidrogeno-1-0","Hidrogeno") """
 def calcularPosibilidad(posibilidad):
     cadena = ""
     posibilidad = int(posibilidad)
     if posibilidad == 0:
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 10: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 20: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 30: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 40: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     if posibilidad == 50:
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 60: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 70: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 80: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 90: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     elif posibilidad == 100: 
-        cadena = f"{posibilidad}%"
+        cadena = f"Posibilidad actual: {posibilidad}%"
     return cadena
