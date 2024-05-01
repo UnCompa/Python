@@ -22,13 +22,16 @@ def compararElemento():
   global elementoObtenido
   print(elementoObtenido,elementoUsuario)
   respuesta = validarElementos(elementoObtenido,elementoUsuario)
+  informacion = respuesta.split("-")
+  lblCompuesto.config(text=informacion[1])
   print(respuesta)
 # FRAMES
 frameJuego = Frame(ventana, bg="#323232")
-lbltitulo = Label(text="Memorize",bg="#222",fg="#fff",foreground="white",font=("Arial",32),pady=10,).pack()
+lbltitulo = Label(text="Memorize",bg="#222",fg="#fff",foreground="white",font=("Arial",32,),pady=10,).pack()
 lblElemento = Label(text="",bg="#222",fg="#fff",font=("Arial",24),pady=24,padx=24,borderwidth=(4),relief="solid",highlightcolor="white",highlightthickness=1)
 lblElemento.pack()
-lblCompuesto = Label(text="?",bg="#222",fg="#fff",font=("Arial",24),pady=32,).pack()
+lblCompuesto = Label(text="?",bg="#222",fg="#fff",font=("Arial",24),pady=32,)
+lblCompuesto.pack()
 txtCompuesto = Entry(bg="#333",fg="White",font="Arial",highlightthickness=1,highlightcolor="White")
 txtCompuesto.pack()
 lblError = Label(text="",pady=24,bg="#222").pack()

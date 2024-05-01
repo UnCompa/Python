@@ -26,7 +26,6 @@ def escojerElemento ():
 def validarElementos(infElemento,respuesta):
     print(infElemento)
     probalElemento=int(infElemento.pop())
-    print(f"Prob {probalElemento}")
     Elemento = str(infElemento[1])
     elementoLower = Elemento.lower()
     respuestaStr = str(respuesta)
